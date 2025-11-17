@@ -11,7 +11,7 @@ print()
 print()
 print()
 # Задаю url-адресс
-url , page_numbers = input("Input url (without / and page):"), int(input("How many pages? (min 1):"))
+url , page_numbers = input("Input url (without "/" and "/page"):"), int(input("How many pages? (min 2):"))
 
 for page_number in range(1,page_numbers):
     try:
