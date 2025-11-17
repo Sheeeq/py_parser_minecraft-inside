@@ -11,9 +11,9 @@ print()
 print()
 print()
 # Задаю url-адресс
-url = input("Input url (without / and page):")
+url , page_numbers = input("Input url (without / and page):"), int(input("How many pages? (min 1):"))
 
-for page_number in range(1,100):
+for page_number in range(1,page_numbers):
     try:
         URL = f'{url}/page/{page_number}/'
         print(f'Page {page_number} available mods:')
