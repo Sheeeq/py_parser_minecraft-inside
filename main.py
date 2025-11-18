@@ -11,14 +11,18 @@ print()
 print()
 print()
 # Задаю url-адресс
-url , page_numbers = input("Input url (without "/" and "/page"):"), int(input("How many pages? (min 2):"))
+url , page_numbers = input("Input url (without / and page):"), int(input("How many pages? (min 2):"))
 
 for page_number in range(1,page_numbers):
     try:
         URL = f'{url}/page/{page_number}/'
         print(f'Page {page_number} available mods:')
         # Получаю страничку
-        r = requests.get(URL)
+        headers = {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+      'Referer': 'https://minecraft-inside.ru/'
+   }
+        r = requests.get(URL, headers=headers)
 
         # Преобразую в текст
         page_text = r.text

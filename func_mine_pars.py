@@ -29,8 +29,8 @@ def get_downloadLink(page_link, version=None, type_version=None):
             direct_url = response.headers['Location']
             return direct_url
          else:
-            return "Не найдено прямой ссылки!"
+            return "Not found direct link!"
 
       except requests.exceptions.TooManyRedirects:
-         return "Слижком много редиректов!!!"
+         return "Too many redirects!!!"
 
