@@ -1,10 +1,10 @@
 # Parser for parse mods from minecraft-inside.ru
 # Installation
-```bash
+``` bash
 git clone https://github.com/Sheeeq/py_parser_minecraft-inside.git
 cd py_parser_minecraft-inside
 ```
 # Usage
-```bash
+``` bash
 python main.py
 ```
